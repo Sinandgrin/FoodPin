@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8Ig-l2-ZU9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8Ig-l2-ZU9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -271,11 +271,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="Pxf-J4-PQe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="Pxf-J4-PQe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cty-t6-IFx">
-                                <rect key="frame" x="45" y="102" width="231" height="242"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cty-t6-IFx">
+                                <rect key="frame" x="45" y="163" width="231" height="242"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZ7-bp-1Wo">
                                         <rect key="frame" x="8" y="165" width="64" height="64"/>
@@ -317,8 +317,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="ABP-xt-j1R"/>
+                                    <constraint firstAttribute="width" constant="231" id="t98-Kg-pzU"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R7-N3-hco">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R7-N3-hco">
                                 <rect key="frame" x="274" y="30" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="76s-c6-TP3"/>
@@ -332,6 +336,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pxf-J4-PQe" secondAttribute="trailing" constant="-16" id="3jo-19-H1m"/>
+                            <constraint firstAttribute="centerY" secondItem="Cty-t6-IFx" secondAttribute="centerY" id="9cj-Bj-dij"/>
+                            <constraint firstItem="4R7-N3-hco" firstAttribute="top" secondItem="avF-aG-Iyv" secondAttribute="bottom" constant="10" id="DZQ-pG-nbt"/>
+                            <constraint firstItem="Pxf-J4-PQe" firstAttribute="leading" secondItem="Nh8-1O-sob" secondAttribute="leadingMargin" constant="-16" id="Mdp-eE-rRO"/>
+                            <constraint firstItem="4R7-N3-hco" firstAttribute="trailing" secondItem="Nh8-1O-sob" secondAttribute="trailingMargin" id="SK4-KX-Jnb"/>
+                            <constraint firstItem="Pxf-J4-PQe" firstAttribute="top" secondItem="Nh8-1O-sob" secondAttribute="topMargin" id="faK-q7-6Op"/>
+                            <constraint firstAttribute="centerX" secondItem="Cty-t6-IFx" secondAttribute="centerX" id="jjv-6B-YxE"/>
+                            <constraint firstItem="n7v-eL-Adt" firstAttribute="top" secondItem="Pxf-J4-PQe" secondAttribute="bottom" id="xbV-77-LS5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="Pxf-J4-PQe" id="EUH-iW-VOe"/>
