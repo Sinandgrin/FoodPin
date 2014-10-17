@@ -200,9 +200,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-zM-Tnm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-zM-Tnm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snA-gv-dzx">
+                                <rect key="frame" x="96" y="220" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.14221307691830304" green="0.25163031463919705" blue="0.4541015625" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="facebook"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-c6-K24">
+                                <rect key="frame" x="160" y="220" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.23631443862325163" green="0.53508257388703895" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="twitter"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-m3-cZo">
+                                <rect key="frame" x="96" y="284" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.9541015625" green="0.12606499524159923" blue="0.074265146734271634" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="message"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-Pz-HvH">
+                                <rect key="frame" x="160" y="284" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.9541015625" green="0.44092622886728167" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="email"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-rk-MvA">
                                 <rect key="frame" x="274" y="30" width="30" height="30"/>
                                 <constraints>
@@ -215,35 +239,24 @@
                                     <segue destination="6za-up-ILC" kind="unwind" unwindAction="close:" id="jVJ-Ry-LcC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snA-gv-dzx">
-                                <rect key="frame" x="96" y="220" width="64" height="64"/>
-                                <color key="backgroundColor" red="0.14221307691830304" green="0.25163031463919705" blue="0.4541015625" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="facebook"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-c6-K24">
-                                <rect key="frame" x="160" y="220" width="64" height="64"/>
-                                <color key="backgroundColor" red="0.23631443862325163" green="0.53508257388703895" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="twitter"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-m3-cZo">
-                                <rect key="frame" x="96" y="284" width="64" height="64"/>
-                                <color key="backgroundColor" red="0.9541015625" green="0.12606499524159923" blue="0.074265146734271634" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="message"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-Pz-HvH">
-                                <rect key="frame" x="160" y="284" width="64" height="64"/>
-                                <color key="backgroundColor" red="0.9541015625" green="0.44092622886728167" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="email"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Cdp-rk-MvA" firstAttribute="trailing" secondItem="u90-w3-BrC" secondAttribute="trailingMargin" id="B96-ax-SZq"/>
                             <constraint firstItem="Cdp-rk-MvA" firstAttribute="trailing" secondItem="u90-w3-BrC" secondAttribute="trailingMargin" id="Be4-ni-cLH"/>
+                            <constraint firstAttribute="centerY" secondItem="4Yl-m3-cZo" secondAttribute="centerY" constant="-32" id="CfI-80-a2y"/>
+                            <constraint firstAttribute="centerY" secondItem="HUf-Pz-HvH" secondAttribute="centerY" constant="-32" id="EQs-7W-viX"/>
+                            <constraint firstItem="rLG-zM-Tnm" firstAttribute="leading" secondItem="u90-w3-BrC" secondAttribute="leadingMargin" constant="-16" id="KZf-vc-N2S"/>
+                            <constraint firstAttribute="centerX" secondItem="HUf-Pz-HvH" secondAttribute="centerX" constant="-32" id="UBR-AW-Xyu"/>
+                            <constraint firstAttribute="centerX" secondItem="4Yl-m3-cZo" secondAttribute="centerX" constant="32" id="VrR-MW-sAr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rLG-zM-Tnm" secondAttribute="trailing" constant="-16" id="acR-Ip-5ky"/>
+                            <constraint firstItem="6M7-ur-X3p" firstAttribute="top" secondItem="rLG-zM-Tnm" secondAttribute="bottom" id="fQX-t7-MV7"/>
+                            <constraint firstAttribute="centerY" secondItem="snA-gv-dzx" secondAttribute="centerY" constant="32" id="gMF-RZ-HZy"/>
+                            <constraint firstItem="rLG-zM-Tnm" firstAttribute="top" secondItem="u90-w3-BrC" secondAttribute="topMargin" id="irE-yV-dzy"/>
+                            <constraint firstAttribute="centerY" secondItem="XWN-c6-K24" secondAttribute="centerY" constant="32" id="xzf-fz-xMs"/>
                             <constraint firstItem="Cdp-rk-MvA" firstAttribute="top" secondItem="2QG-EP-G2l" secondAttribute="bottom" constant="10" id="ykX-sh-fep"/>
+                            <constraint firstAttribute="centerX" secondItem="XWN-c6-K24" secondAttribute="centerX" constant="-32" id="ymf-IM-u64"/>
+                            <constraint firstAttribute="centerX" secondItem="snA-gv-dzx" secondAttribute="centerX" constant="32" id="zJf-EF-22c"/>
                         </constraints>
                     </view>
                     <connections>
