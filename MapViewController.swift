@@ -15,12 +15,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var restaurant:Restaurant!
 
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
 
         // Convert address to Lat/Long coordinate and annotate it on map
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
+        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in  // not sure i understand the way this function call and closure work. why doesn't placemarks need to be in [ ]
             
             if error != nil {
                 println(error)
@@ -42,19 +45,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
         })
         
-        mapView.delegate = self
-        
     }
+  
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         let identifier = "MyPin"
         
+        
+        // checks to see if annotation is a MKUserLocation (ie. blue dot current location). Even though this feature has not been implemented in the app, we don't want to change its annotation view.
         if annotation.isKindOfClass(MKUserLocation) {
             return nil
         }
         
         // reuse the annotation if possible
-        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) // trying to understand how the idenifier works
         
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
