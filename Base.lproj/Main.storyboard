@@ -85,7 +85,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Food Pin" id="oKX-mi-wP6">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="SZQ-wc-CBb">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="lx9-lV-o0Y" kind="modal" identifier="addRestaurant" id="Hg8-hv-fC5"/>
                             </connections>
@@ -178,12 +177,14 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eNL-3t-zUZ"/>
                                     <barButtonItem systemItem="action" id="dAH-cy-Beb">
+                                        <color key="tintColor" red="0.92156862745098034" green="0.28627450980392155" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="uoe-f5-eia" kind="modal" identifier="showShare" id="FVM-cG-8dg"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eIL-gM-OxP"/>
                                     <barButtonItem systemItem="compose" id="y05-pi-dC1">
+                                        <color key="tintColor" red="0.92156862745098034" green="0.28627450980392155" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="QQA-By-ePA" kind="modal" identifier="showReview" id="yvX-WG-pjP"/>
                                         </connections>
@@ -248,6 +249,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGt-g2-lbh">
                                                     <rect key="frame" x="8" y="8" width="46" height="21"/>
+                                                    <color key="tintColor" red="0.92156862745098034" green="0.28627450980392155" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -311,11 +313,14 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-bJ-Dth">
                                                     <rect key="frame" x="8" y="34" width="50" height="30"/>
-                                                    <color key="backgroundColor" red="0.9541015625" green="0.1762446104" blue="0.093235916840000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="Yes">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="updateIsVisited:" destination="cGR-Vm-L2z" eventType="touchUpInside" id="WPF-wG-HBY"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H44-pb-uTv">
                                                     <rect key="frame" x="71" y="34" width="50" height="30"/>
@@ -324,6 +329,9 @@
                                                     <state key="normal" title="No">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="updateIsVisited:" destination="cGR-Vm-L2z" eventType="touchUpInside" id="5bZ-Oq-aGr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -340,12 +348,22 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GXi-Jo-a8E">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Z6v-yO-gmw" kind="unwind" unwindAction="unwindToHomeScreen:" id="mZ7-R0-43x"/>
+                                <segue destination="Z6v-yO-gmw" kind="unwind" unwindAction="unwindToHomeScreen:" id="tF8-uo-vTy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="qa4-YH-GaR">
+                            <connections>
+                                <action selector="save" destination="cGR-Vm-L2z" id="QIH-6u-8IP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="5Nh-1N-GNJ" id="dmN-L5-7Mv"/>
+                        <outlet property="locationTextField" destination="bK4-R9-pnn" id="azn-Ta-1l3"/>
+                        <outlet property="nameTextField" destination="Gk9-2j-ImH" id="NR6-Pw-oYR"/>
+                        <outlet property="noButton" destination="H44-pb-uTv" id="NNN-eo-jXd"/>
+                        <outlet property="typeTextField" destination="8SP-tx-SRf" id="RWW-jJ-Ru7"/>
+                        <outlet property="yesButton" destination="Rmt-bJ-Dth" id="2EW-Fh-fPk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBb-rs-19B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -591,6 +609,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lx9-lV-o0Y" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DgL-uX-bVZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xxv-WX-U3F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -623,4 +642,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

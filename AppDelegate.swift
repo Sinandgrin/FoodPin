@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        // set application wide appearance customization
+        // Change navigation bar appearance
         UINavigationBar.appearance().barTintColor = UIColor(red: 231/255, green: 95/255, blue: 53/255, alpha: 0.3)
         
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -28,10 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         }
         
+        // Change status bar style
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-        UIBarButtonItem.appearance().tintColor = UIColor(red: 235/255, green: 73/255, blue: 27/255, alpha: 1.0)
-        
+        // Change toolbar style
+    //    UIBarButtonItem.appearance().tintColor = UIColor(red: 237/255, green: 95/255, blue: 53/255, alpha: 1.0)
         UIToolbar.appearance().barTintColor = UIColor(red: 237/255, green: 240/255, blue: 243/255, alpha: 0.5)
 
         
