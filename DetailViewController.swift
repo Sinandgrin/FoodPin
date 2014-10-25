@@ -38,9 +38,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // sets the Self Sizing Cell behavior
         tableView.estimatedRowHeight = 36
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        
-        
 
     }
 

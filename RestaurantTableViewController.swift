@@ -10,9 +10,9 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
     
-    
-    
-
+    @IBAction func unwindToHomeScreen (segue:UIStoryboardSegue) {
+        
+    }
     
     var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "G/F, 72 Po Hing Fong, Sheung Wan, Hong Kong", image: "cafedeadend.jpg", isVisited: true),
@@ -47,8 +47,6 @@ class RestaurantTableViewController: UITableViewController {
         // sets the self sizing cell for location
         tableView.estimatedRowHeight = 18
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -205,8 +203,5 @@ class RestaurantTableViewController: UITableViewController {
             self.navigationController?.hidesBarsOnSwipe = true
     }
 
-    @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
-        
-    }
-  
+
 }
